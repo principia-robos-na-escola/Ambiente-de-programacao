@@ -21,11 +21,15 @@
 
 --> E trocar a OITAVA LINHA de:
 
-`<script type="text/javascript" src="../../msg/js/en.js"></script>`
+```{html}
+<script type="text/javascript" src="../../msg/js/en.js"></script>
+```
 
 --> Para:
 
-`<script type="text/javascript" src="../../msg/js/pt-br.js"></script>`
+```{html}
+<script type="text/javascript" src="../../msg/js/pt-br.js"></script>
+```
 
 ### Como usar os blocos do Tira Tampa
 
