@@ -59,7 +59,7 @@ Se não ele vai começar os comandos de novo ou ficar se movendo para sempre.
 
 Ex: /home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/blocks/principia.js
 
-```
+```js
 goog.provide('Blockly.Blocks.Principia');
 
 goog.require('Blockly.Blocks');
@@ -81,7 +81,7 @@ Blockly.Blocks['serial_print'] = {
 
 `/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/generators/arduino/principia.js`
 
-```
+```js
 Blockly.Arduino.serial_print = function() {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0'
   //content = content.replace('(','').replace(')','');
@@ -218,5 +218,4 @@ Copyright (C) 2012~2015 Fred Lin gasolin+blockly@gmail.com
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
