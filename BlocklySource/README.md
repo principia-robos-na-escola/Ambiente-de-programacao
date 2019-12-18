@@ -21,13 +21,13 @@
 
 --> E trocar a OITAVA LINHA de:
 
-```{html}
+```html
 <script type="text/javascript" src="../../msg/js/en.js"></script>
 ```
 
 --> Para:
 
-```{html}
+```html
 <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
 ```
 
