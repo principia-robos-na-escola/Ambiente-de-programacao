@@ -1,0 +1,34 @@
+bins/WString.cpp.o: \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/cores/esp32/WString.cpp \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/cores/esp32/WString.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/stdlib.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/machine/ieeefp.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/_ansi.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/newlib.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/config.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/features.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/esp32/xtensa/config/core-isa.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/reent.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/_ansi.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/_types.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/machine/_types.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/machine/_default_types.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/lock.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/cdefs.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/machine/stdlib.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/alloca.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/string.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/string.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/ctype.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/cores/esp32/pgmspace.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/cores/esp32/stdlib_noniso.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/cores/esp32/esp32-hal-log.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/config/sdkconfig.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/log/esp_log.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/stdint.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/sys/_intsup.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/esp32/rom/ets_sys.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/soc/soc/soc.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/esp32/esp_assert.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/newlib/assert.h \
+ /home/triques/.arduino15/packages/esp32/hardware/esp32/1.0.2/tools/sdk/include/log/esp_log_internal.h
