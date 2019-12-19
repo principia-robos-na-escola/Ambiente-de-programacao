@@ -22,6 +22,15 @@ programas quando comparado à IDE do Arduino.
 
 `cd Ambiente-de-programacao/BlocklySource`
 
+- Execute o script de precompilação com
+
+`sh precompile.sh`
+
+Isso compilará todas as bibliotecas necessárias e irá gerar um arquivo único chamado `core.a`.
+
+A *IDE* do Arduino recompila **TODAS** esssa bibliotecas sempre que o *sketch* é alterado gastando
+muito tempo uma vez que as bibliotecas não mudam.
+
 - Para executar o BlocklyDuino, use o comando
 
 `python esp32_web_server.py`
