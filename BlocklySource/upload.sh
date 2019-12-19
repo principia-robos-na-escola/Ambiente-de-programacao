@@ -70,7 +70,7 @@ O_INCLUDES="-Iesp32/hardware/esp32/1.0.2/cores/esp32 -Iesp32/hardware/esp32/1.0.
 INC_WIFI="-I$LIB_DIR/WiFi/src"
 INC_UP="-I$LIB_DIR/Update/src"
 
-ALL_INCLUDES="$O_INCLUDES $INC_WIFI $INC_UP -I$LIB_DIR/WebServer/src -IESP32_AnalogWrite -I$LIB_DIR/ESPmDNS/src -I$LIB_DIR/FS/src"
+ALL_INCLUDES="$O_INCLUDES $INC_WIFI $INC_UP -I$LIB_DIR/WebServer/src -I$LIB_DIR/ESP32_AnalogWrite -I$LIB_DIR/ESPmDNS/src -I$LIB_DIR/FS/src"
 
 GPP_FLAGS="-std=gnu++11 -fno-exceptions -Os -g3 -Wpointer-arith -fexceptions -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -w -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fno-rtti -MMD -c -DF_CPU=240000000L"
 GCC_FLAGS="-std=gnu99 -Os -g3 -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -Wpointer-arith -w -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -Wno-old-style-declaration -MMD -c"

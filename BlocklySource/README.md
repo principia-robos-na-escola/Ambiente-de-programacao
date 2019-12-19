@@ -1,7 +1,7 @@
 ### Welcome to Blocky do Princípia Robos na Escola
 
---> Este projeto é um Fork do [BlocklyDuino](https://github.com/BlocklyDuino/BlocklyDuino)
---> No qual adicionamos a capacidade de programar o ESP32 via WIFI, além dos outros Arduinos (Nano, Uno...)
+Este projeto é um Fork do [BlocklyDuino](https://github.com/BlocklyDuino/BlocklyDuino)
+no qual adicionamos a capacidade de programar o ESP32 via WIFI, além dos outros Arduinos (Nano, Uno...)
 
 ### Como fazer tudo funcionar para ESP32
 
@@ -9,23 +9,32 @@
 
 `sudo apt install python-serial`
 
-2) Execute:
+2) Execute o script `precompile.sh` com
+
+`sh precompile.sh`
+
+Isso compilará todas as bibliotecas necessárias e irá gerar um arquivo único chamado `core.a`.
+
+A *IDE* do Arduino recompila **TODAS** esssa bibliotecas sempre que o *sketch* é alterado gastando
+muito tempo uma vez que as bibliotecas não mudam.
+
+3) Execute:
 
 `python esp32_web_server.py`
 
 ### Como Mudar para o Português
 
---> Para traduzir para português, basta editar o index.html, que setá em:
+Para traduzir para português, basta editar o index.html, que setá em:
 
 `/home/simoes/Documents/github/RobosNaEscola/BlockySource/blockly/apps/blocklyduino`
 
---> E trocar a OITAVA LINHA de:
+E trocar a OITAVA LINHA de:
 
 ```html
 <script type="text/javascript" src="../../msg/js/en.js"></script>
 ```
 
---> Para:
+Para:
 
 ```html
 <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
