@@ -290,7 +290,7 @@ Blockly.Arduino.grove_ultrasonic_ranger = function() {
 
   var code;
     code = 'if(ultrasonic_'+sonar_number+'.read(CM) < '+threshold+') s'+sonar_number+' = 1;\n'+
-           'else s'+sonar_number+' = 0'
+           'else s'+sonar_number+' = 0;\n'
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 

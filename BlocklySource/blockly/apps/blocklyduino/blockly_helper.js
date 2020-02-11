@@ -199,11 +199,9 @@ function load_by_url(uri) {
 
 function uploadCode(code, callback) {
     var target = document.getElementById('content_arduino');
-    var nome = document.getElementById('nome_do_grupo').value;
     var spinner = new Spinner().spin(target);
 
-    //var url = "http://143.107.183.170:8080/uploads/"+nome+"/";
-    var url = "http://127.0.0.1:8080";
+    var url = "http://127.0.0.1:8080/";
     var method = "POST";
 
     // You REALLY want async = true.

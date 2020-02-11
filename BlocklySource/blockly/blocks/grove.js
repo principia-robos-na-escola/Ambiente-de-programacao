@@ -258,9 +258,8 @@ Blockly.Blocks['grove_ultrasonic_ranger'] = {
 	    .appendField("Número Sonar")
         .appendField(new Blockly.FieldDropdown([["1", "1"], ["2","2"], ["3","3"]]), "SONAR")
         .appendField("Limiar de detecção")
-        .appendField(new Blockly.FieldTextInput('0',
-        Blockly.FieldTextInput.numberValidator), "THRESHOLD");
-    this.setOutput(true, 'Boolean');
+        .appendField(new Blockly.FieldDropdown([["cm", "cm"],  ["inch", "inch"]]), "THRESHOLD");
+    this.setOutput(true, 'Number');
     this.setTooltip('Non-contact distance measurement module');
   }
 };
