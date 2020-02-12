@@ -1,19 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
 import BaseHTTPServer
 import SimpleHTTPServer
-import itertools
-import logging
-import platform
 import os
-import re
 import subprocess
 import tempfile
 import urllib
-from optparse import OptionParser
-
-logging.basicConfig(level=logging.DEBUG)
 
 class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def do_HEAD(self):
@@ -35,10 +28,8 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             self.end_headers()
 
     def do_POST(self):
-        print "[POST]"
         """Save new page text and display it"""
         if self.path != "/":
-            print "banana"
             return SimpleHTTPServer.SimpleHTTPRequestHandler.do_POST(self)
 
         length = int(self.headers.getheader('content-length'))
@@ -47,7 +38,6 @@ class Handler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
             dirname = tempfile.mkdtemp()
             sketchname = os.path.join(dirname, os.path.basename(dirname)) + ".ino"
-            print sketchname
             f = open(sketchname, "wb")
             f.write(text + "\n")
             f.close()

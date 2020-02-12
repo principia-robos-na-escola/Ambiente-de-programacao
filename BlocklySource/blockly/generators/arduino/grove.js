@@ -272,27 +272,6 @@ Blockly.Arduino.grove_line_finder = function() {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino.grove_ultrasonic_ranger = function() {
-  var sonar_number = this.getFieldValue('SONAR');
-  var threshold = this.getFieldValue('THRESHOLD');
-  Blockly.Arduino.definitions_['define_ultrasonic'] =
-        '#include <Ultrasonic.h>\n'+
-        '#define TRIGGER1 23\n'+
-        '#define ECHO1 22\n'+
-        '#define TRIGGER2 32\n'+
-        '#define ECHO2 33\n'+
-        '#define TRIGGER3 25\n'+
-        '#define ECHO3 26\n'+
-        'int s1=0,s2=0,s3=0;\n';
-
-  Blockly.Arduino.definitions_['var_ultrasonic'+sonar_number] =
-        'Ultrasonic ultrasonic_'+sonar_number+'(TRIGGER'+sonar_number+', ECHO'+sonar_number+', 20000UL);\n';
-
-  var code;
-    code = 'if(ultrasonic_'+sonar_number+'.read(CM) < '+threshold+') s'+sonar_number+' = 1;\n'+
-           'else s'+sonar_number+' = 0;\n'
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
 
 Blockly.Arduino.grove_motor_shield = function() {
   var dropdown_direction = this.getFieldValue('DIRECTION');
@@ -511,4 +490,32 @@ Blockly.Arduino.grove_bluetooth_slave = function() {
   '  }\n'+
   '}\n';
   return code;
+};
+
+Blockly.Arduino.grove_ultrasonic_ranger = function() {
+  var sonar_number = this.getFieldValue('SONAR');
+  var threshold = Blockly.Arduino.valueToCode(this, 'THRESHOLD', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['define_ultrasonic'] =
+        '#include <Ultrasonic.h>\n'+
+        '#define TRIGGER1 23\n'+
+        '#define ECHO1 22\n'+
+        '#define TRIGGER2 32\n'+
+        '#define ECHO2 33\n'+
+        '#define TRIGGER3 25\n'+
+        '#define ECHO3 26\n'+
+        'int s1=0,s2=0,s3=0;\n';
+
+  Blockly.Arduino.definitions_['var_ultrasonic'+sonar_number] =
+        'Ultrasonic ultrasonic_'+sonar_number+'(TRIGGER'+sonar_number+', ECHO'+sonar_number+', 20000UL);\n';
+
+    var code = 'if(ultrasonic_'+sonar_number+'.read(CM) < '+threshold+') s'+sonar_number+' = 1;\n'+
+           'else s'+sonar_number+' = 0;\n'
+  return code;
+};
+
+  Blockly.Arduino.readsonar = function() {
+    var sonar_number = this.getFieldValue('LESONAR');
+    var code = 's'+sonar_number;
+
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

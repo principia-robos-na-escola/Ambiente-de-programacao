@@ -2,9 +2,10 @@
 <head>
   <meta charset="utf-8">
   <title>BlocklyDuino</title>
-  <script type="text/javascript" src="../../blockly_compressed.js"></script>
+  <script type="text/javascript" src="../../blockly_uncompressed.js"></script>
   <script type="text/javascript" src="../../blocks_compressed.js"></script>
-  <script type="text/javascript" src="../../arduino_compressed.js"></script> <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
+  <script type="text/javascript" src="../../arduino_compressed.js"></script>
+  <script type="text/javascript" src="../../msg/js/pt-br.js"></script>
   <script type="text/javascript" src="Blob.js"></script>
   <script type="text/javascript" src="spin.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
@@ -411,7 +412,14 @@ function init() {
       <block type="grove_pir_motion_sensor"></block>
       <block type="grove_line_finder"></block>
       <block type="grove_rgb_led"></block>
-      <block type="grove_ultrasonic_ranger"></block>
+      <block type="grove_ultrasonic_ranger">
+        <value name="THRESHOLD">
+          <block type="math_number">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+      </block>
+      <block type="readsonar"></block>
     </category>
     <category name="Grove LCD">
       <block type="grove_serial_lcd_print">
@@ -459,7 +467,7 @@ function init() {
             <field name="NUM">1000</field>
           </block>
         </value>
-			</block>
+      </block>
       <block type="TiraTampa_Frente">
         <value name="TEMPO">
           <block type="math_number">

@@ -248,21 +248,6 @@ Blockly.Blocks['grove_line_finder'] = {
   }
 };
 
-Blockly.Blocks['grove_ultrasonic_ranger'] = {
-  helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
-  init: function() {
-    this.setColour(190);
-    this.appendDummyInput()
-	    .appendField("Ultrasonic Ranger")
-        .appendField(new Blockly.FieldImage("https://statics3.seeedstudio.com/seeed/img/2016-09/kIyY21sbC6ct7JYzCWf1mAPs.jpg", 64, 64))
-	    .appendField("Número Sonar")
-        .appendField(new Blockly.FieldDropdown([["1", "1"], ["2","2"], ["3","3"]]), "SONAR")
-        .appendField("Limiar de detecção")
-        .appendField(new Blockly.FieldDropdown([["cm", "cm"],  ["inch", "inch"]]), "THRESHOLD");
-    this.setOutput(true, 'Number');
-    this.setTooltip('Non-contact distance measurement module');
-  }
-};
 
 Blockly.Blocks['grove_motor_shield'] = {
   helpUrl: 'http://www.seeedstudio.com/wiki/Motor_Shield',
@@ -479,27 +464,34 @@ Blockly.Blocks['grove_bluetooth_slave'] = {
     this.setTooltip('Bluetooth V2.0+EDR slave. Support single slave per board');
   }
 };
-//http://www.seeedstudio.com/wiki/File:Twig-Temp%26Humi.jpg
-//http://www.seeedstudio.com/wiki/Grove-_Temperature_and_Humidity_Sensor
 
-//http://www.seeedstudio.com/wiki/Grove_-_125KHz_RFID_Reader
+Blockly.Blocks['grove_ultrasonic_ranger'] = {
+  helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
+  init: function() {
+    this.setColour(190);
+    this.appendDummyInput()
+	    .appendField("Sonar")
+        .appendField(new Blockly.FieldDropdown([["1", "1"], ["2","2"], ["3","3"]]), "SONAR")
+        .appendField(new Blockly.FieldImage("https://statics3.seeedstudio.com/seeed/img/2016-09/kIyY21sbC6ct7JYzCWf1mAPs.jpg", 64, 64));
+    this.appendValueInput("THRESHOLD", 'Number')
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("Distancia(cm)")
+        .setCheck('Number');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('TRIGGER_S1 23, ECHO_S1 22, TRIGGER_S2 32, ECHO_S2 33, TRIGGER_S3 25, ECHO_S3 26');
+    this.setInputsInline(true);
+      }
+};
 
-/*
-void setup()
-{
-	pinMode( 3 , OUTPUT);
-	pinMode( 1 , INPUT);
-}
-
-void loop()
-{
-	if (digitalRead( 1))
-	{
-		digitalWrite( 3 , HIGH);
-	}
-	else
-	{
-		digitalWrite( 1 , LOW);
-	}
-}
-*/
+Blockly.Blocks['readsonar'] = {
+  helpUrl: 'http://arduino.cc/en/Reference/Constants',
+  init: function() {
+    this.setColour(230);
+    this.appendDummyInput()
+        .appendField("Sonar")
+        .appendField(new Blockly.FieldDropdown([["1", "1"], ["2","2"], ["3","3"]]), "LESONAR");
+    this.setOutput(true, 'Number');
+    this.setTooltip('');
+  }
+};
