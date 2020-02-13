@@ -81,8 +81,9 @@ echo $1
 O_INCLUDES="-Iesp32/hardware/esp32/1.0.2/cores/esp32 -Iesp32/hardware/esp32/1.0.2/variants/esp32 -I$LIB_DIR/ArduinoOTA/src"
 INC_WIFI="-I$LIB_DIR/WiFi/src"
 INC_UP="-I$LIB_DIR/Update/src"
+#INC_ULTRASONIC="-I/$LIB_DIR/Ultrasonic/src"
 
-ALL_INCLUDES="$O_INCLUDES $INC_WIFI $INC_UP -I$LIB_DIR/WebServer/src -I$LIB_DIR/ESP32_AnalogWrite -I$LIB_DIR/ESPmDNS/src -I$LIB_DIR/FS/src"
+ALL_INCLUDES="$O_INCLUDES $INC_WIFI $INC_UP $INC_ULTRASONIC -I$LIB_DIR/WebServer/src -I$LIB_DIR/ESP32_AnalogWrite -I$LIB_DIR/ESPmDNS/src -I$LIB_DIR/FS/src"
 
 GPP_FLAGS="-std=gnu++11 -fno-exceptions -Os -g3 -Wpointer-arith -fexceptions -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -w -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fno-rtti -MMD -c -DF_CPU=240000000L"
 GCC_FLAGS="-std=gnu99 -Os -g3 -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -Wpointer-arith -w -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -Wno-old-style-declaration -MMD -c"
@@ -134,6 +135,10 @@ echo Compiled ESPmDNS
 $GPP $DEFINES $INCLUDES $GPP_FLAGS $O_DEFINES $ALL_INCLUDES $LIB_DIR/FS/src/vfs_api.cpp -o bins/vfs_api.cpp.o
 $GPP $DEFINES $INCLUDES $GPP_FLAGS $O_DEFINES $ALL_INCLUDES $LIB_DIR/FS/src/FS.cpp -o bins/FS.cpp.o
 echo Compiled FS
+
+#Compiled library "Ultrasonic"
+$GPP $DEFINES $INCLUDES $GPP_FLAGS $O_DEFINES $ALL_INCLUDES $LIB_DIR/Ultrasonic/src/Ultrasonic.cpp -o bins/Ultrasonic.cpp.o
+echo Compiled Ultrasonic
 
 #Compiled core...
 for file in $LIB_CORE/*.c; do

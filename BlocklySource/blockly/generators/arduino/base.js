@@ -43,8 +43,8 @@ Blockly.Arduino.base_map = function() {
 
 Blockly.Arduino.inout_buildin_led = function() {
   var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(13, OUTPUT);';
-  var code = 'digitalWrite(13, ' + dropdown_stat + ');\n'
+  Blockly.Arduino.setups_['setup_output_13'] = 'pinMode(2, OUTPUT);';
+  var code = 'digitalWrite(2, ' + dropdown_stat + ');\n'
   return code;
 };
 
