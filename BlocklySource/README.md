@@ -1,13 +1,13 @@
-# BlocklyPrincipia
+<h1 align="center">BlocklyPrincipia</h1>
 
-Desenvolvimento da interface de programacao com Blocos para ESP32
+Interface de um editor de programação visual com blocos, para uso com ESP32. Este projeto é um fork de [BlocklyDuino](https://github.com/BlocklyDuino/BlocklyDuino), no qual adicionamos algumas funcionalidades como:
 
-### Welcome to Blocky do Princípia Robos na Escola
+- descrições em português dos blocos
+- suporte a programação via Wi-Fi, utilizando a ESP32
+- suporte a outros modelos de arduino, como Nano e Uno
+- blocos relacionados ao robô utilizado pela [organização](http://principia.icmc.usp.br/).
 
---> Este projeto é um Fork de https://github.com/BlocklyDuino/BlocklyDuino
---> No qual adicionamos a capacidade de programar o ESP32 via WIFI, além dos outros Arduinos (Nano, Uno...)
-
-### Como fazer TUDO funcionar para ESP32!! Jeito fácil.
+# Como fazer TUDO funcionar para ESP32!! Jeito fácil.
 
 1) Instale a biblioteca `python-serial`
 

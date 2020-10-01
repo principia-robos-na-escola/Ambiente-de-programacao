@@ -10,7 +10,7 @@ O 'sistema' é baseado no IDF da Espressif para a compilação dos programas, ju
 feito pelo [Soneca](https://www.github.com/FranPedrosa) que é significativamente mais rápido na compilação dos
 programas quando comparado à IDE do Arduino.
 
-# Como Instalar e executar
+## Como Instalar e executar
 Este tutorial ensina a fazer a instalação em um sistema Ubuntu - testado no 18.04.
 
 - Instale as dependências do projeto.
@@ -53,3 +53,9 @@ logo podemos também controlar o robô via *web-browser* (não recomendamos, por
 ## Esquemático do Robozinho
 
 ![Esquematico TiraTampinha](imgs/tt.jpg)
+
+## Sobre o Principia - Robôs na Escola
+
+Nossa organização tem um objetivo que pode ser simplificado como: a missão de mostrar para alunos de escolas públicas a enxergar novas possibilidades pessoais e profissionais por meio da inclusão digital e do ensino de robótica.
+
+Saiba mais em [nosso site](http://principia.icmc.usp.br).
